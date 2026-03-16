@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiment | Tagliala Labs</title>
+  <meta name="description" content="Detailed AI experiment report from Tagliala Labs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <div class="sky-noise" aria-hidden="true"></div>
+  <header class="site-header compact reveal">
+    <a class="brand" href="/" aria-label="Tagliala Labs home">
+      <span class="brand-text">Tagliala Labs</span>
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/experiments/">Experiments</a>
+    </nav>
+  </header>
+
+  <main class="detail-main">
+    <article id="experiment-detail" class="experiment-detail reveal" aria-live="polite"></article>
+    <p id="detail-error" class="empty-state" hidden>Experiment record not found.</p>
+  </main>
+
+  <footer class="site-footer reveal">
+    <p><a href="/experiments/">Back to archive</a></p>
+  </footer>
+
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/experiments.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiments | Tagliala Labs</title>
+  <meta name="description" content="All published AI experiments from Tagliala Labs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <div class="sky-noise" aria-hidden="true"></div>
+  <header class="site-header compact reveal">
+    <a class="brand" href="/" aria-label="Tagliala Labs home">
+      <span class="brand-text">Tagliala Labs</span>
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/experiments/" aria-current="page">Experiments</a>
+    </nav>
+  </header>
+
+  <main class="archive-main">
+    <section class="archive-head reveal">
+      <p class="eyebrow">Records Ledger</p>
+      <h1>Experiment Archive</h1>
+      <p class="lead">Filter by status and trace how each hypothesis evolved from field test to deployment decision.</p>
+    </section>
+
+    <section class="filters reveal" aria-label="Experiment filters">
+      <label>
+        Status
+        <select id="status-filter">
+          <option value="all">All</option>
+        </select>
+      </label>
+      <label>
+        Tag
+        <select id="tag-filter">
+          <option value="all">All</option>
+        </select>
+      </label>
+      <label>
+        Sort
+        <select id="sort-filter">
+          <option value="newest">Newest first</option>
+          <option value="oldest">Oldest first</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="reveal">
+      <div id="archive-list" class="card-grid"></div>
+      <p id="archive-empty" class="empty-state" hidden>No experiments match your filters.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer reveal">
+    <p><a href="/">Return to command deck</a></p>
+  </footer>
+
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/experiments.js"></script>
+</body>
+</html>
