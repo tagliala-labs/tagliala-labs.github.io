@@ -242,7 +242,7 @@ function initDetail(experiments) {
 
   detailRoot.innerHTML = `
     <header>
-      <p class="eyebrow">Experiment Log</p>
+      <p class="eyebrow">Field Dispatch</p>
       <h1>${window.TaglialaUI.escapeHtml(found.title)}</h1>
       <div class="meta-line">
         <span class="chip status-${statusClass}">${window.TaglialaUI.escapeHtml(found.status || 'unknown')}</span>
@@ -263,7 +263,7 @@ function showFallbackError(error) {
 
   targets.forEach((element) => {
     element.hidden = false;
-    element.textContent = `Unable to load experiment records: ${error.message}`;
+    element.textContent = `Unable to retrieve field dispatches: ${error.message}`;
   });
 
   const list = document.getElementById('archive-list');

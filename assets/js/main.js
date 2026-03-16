@@ -56,14 +56,17 @@ function experimentCardTemplate(experiment) {
 
   return `
     <article class="experiment-card">
-      <div class="meta-line">
-        <span class="chip status-${statusClass}">${escapeHtml(experiment.status || 'unknown')}</span>
-        <span>${formatDate(experiment.date)}</span>
+      <div class="card-stamp">Intel Report</div>
+      <div class="card-content">
+        <div class="meta-line">
+          <span class="chip status-${statusClass}">${escapeHtml(experiment.status || 'unknown')}</span>
+          <span>${formatDate(experiment.date)}</span>
+        </div>
+        <h3 class="card-title">${escapeHtml(experiment.title)}</h3>
+        <p>${escapeHtml(experiment.summary || '')}</p>
+        <div class="meta-line">${toTagChips(experiment.tags)}</div>
+        <a class="btn btn-ghost" href="/experiment.html?slug=${slug}">Open field report</a>
       </div>
-      <h3 class="card-title">${escapeHtml(experiment.title)}</h3>
-      <p>${escapeHtml(experiment.summary || '')}</p>
-      <div class="meta-line">${toTagChips(experiment.tags)}</div>
-      <a class="btn btn-ghost" href="/experiment.html?slug=${slug}">Read record</a>
     </article>
   `;
 }
